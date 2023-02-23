@@ -12,19 +12,19 @@ public class Tile extends Button{
   private int row;
   private int col;
   private boolean wonFlag;
-  private final ImageView flagged = new ImageView(new Image("Flagged.png"));
-  private final ImageView triggeredBomb = new ImageView(new Image("TriggeredBomb.png"));
-  private final ImageView bomb = new ImageView(new Image("Bomb.png"));
-  private final ImageView zero = new ImageView(new Image("Empty.png"));
-  private final ImageView one = new ImageView(new Image("1.png"));
-  private final ImageView two = new ImageView(new Image("2.png"));
-  private final ImageView three = new ImageView(new Image("3.png"));
-  private final ImageView four = new ImageView(new Image("4.png"));
-  private final ImageView five = new ImageView(new Image("5.png"));
-  private final ImageView six = new ImageView(new Image("6.png"));
-  private final ImageView seven = new ImageView(new Image("7.png"));
-  private final ImageView eight = new ImageView(new Image("8.png"));
-  private final ImageView unrevealed = new ImageView(new Image("unrevealed.png"));
+  private final ImageView flagged = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/Flagged.png"));
+  private final ImageView triggeredBomb = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/TriggeredBomb.png"));
+  private final ImageView bomb = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/Bomb.png"));
+  private final ImageView zero = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/Empty.png"));
+  private final ImageView one = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/1.png"));
+  private final ImageView two = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/2.png"));
+  private final ImageView three = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/3.png"));
+  private final ImageView four = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/4.png"));
+  private final ImageView five = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/5.png"));
+  private final ImageView six = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/6.png"));
+  private final ImageView seven = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/7.png"));
+  private final ImageView eight = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/8.png"));
+  private final ImageView unrevealed = new ImageView(new Image("file:src/main/resources/game/engine/minesweeper/unrevealed.png"));
   
   public Tile(double DIFFICULTY) {
     isMine = Math.random() < DIFFICULTY;
@@ -74,6 +74,7 @@ public class Tile extends Button{
   
   public void reveal() {
     isRevealed = true;
+    isFlagged = false;
     render();
   }
 

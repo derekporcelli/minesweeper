@@ -19,7 +19,7 @@ public class Minesweeper extends Application{
 
   public void start(Stage stage) throws Exception {
     stage.setTitle("Minesweeper by Derek Porcelli");
-    stage.getIcons().add(new Image("Flagged.png"));
+    stage.getIcons().add(new Image("file:src/main/resources/game/engine/minesweeper/Flagged.png"));
     
     VBox vbox = new VBox();
 

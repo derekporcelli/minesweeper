@@ -23,18 +23,18 @@ public class Minefield{
 
         tile.setOnMouseClicked(event -> {
           if(event.getButton() == MouseButton.PRIMARY&&!tile.isRevealed()) {
+            search(tile);
             if(tile.isMine()) {
-              for(int k = 0; k < rows; k++) {
-                for(int l = 0; l < columns; l++) {
+              for (int k = 0; k < rows; k++) {
+                for (int l = 0; l < columns; l++) {
                   field[k][l].wonFlag(false);
                   field[k][l].setDisable(true);
-                  if(field[k][l].isMine()) {
+                  if (field[k][l].isMine()) {
                     field[k][l].reveal();
                   }
                 }
               }
             }
-            search(tile);
             isGameWon = checkWin();
           } else if (event.getButton() == MouseButton.SECONDARY&&!tile.isRevealed()) {
             tile.flag();
